@@ -1,0 +1,40 @@
+
+✅ /home/runner/work/backup-library-app/backup-library-app/test/excel_import_test.dart: Excel & CSV Spreadsheet Import Tests generateTemplateCsv outputs standard valid CSV header
+✅ /home/runner/work/backup-library-app/backup-library-app/test/auth_and_rbac_test.dart: Authentication & Security (RBAC & Multi-Tenant) Default admin credentials log in successfully as Admin
+✅ /home/runner/work/backup-library-app/backup-library-app/test/auth_and_rbac_test.dart: Authentication & Security (RBAC & Multi-Tenant) Incorrect admin password fails authentication gracefully
+✅ /home/runner/work/backup-library-app/backup-library-app/test/excel_import_test.dart: Excel & CSV Spreadsheet Import Tests parseAndImport successfully parses standard CSV rows
+✅ /home/runner/work/backup-library-app/backup-library-app/test/excel_import_test.dart: Excel & CSV Spreadsheet Import Tests parseAndImport handles Tab-Separated Values (TSV) directly from Microsoft Excel
+✅ /home/runner/work/backup-library-app/backup-library-app/test/auth_and_rbac_test.dart: Authentication & Security (RBAC & Multi-Tenant) Registering new admin account updates session and tenant ID
+✅ /home/runner/work/backup-library-app/backup-library-app/test/auth_and_rbac_test.dart: Authentication & Security (RBAC & Multi-Tenant) Admin registration rejects weak password
+✅ /home/runner/work/backup-library-app/backup-library-app/test/excel_import_test.dart: Excel & CSV Spreadsheet Import Tests parseAndImport records errors for invalid rows
+✅ /home/runner/work/backup-library-app/backup-library-app/test/auth_and_rbac_test.dart: Authentication & Security (RBAC & Multi-Tenant) Staff Receptionist logs in with phone and PIN, role strictly Receptionist
+✅ /home/runner/work/backup-library-app/backup-library-app/test/auth_and_rbac_test.dart: Authentication & Security (RBAC & Multi-Tenant) Deactivated staff member is barred from logging in
+✅ /home/runner/work/backup-library-app/backup-library-app/test/auth_and_rbac_test.dart: Authentication & Security (RBAC & Multi-Tenant) Sign out cleanly clears active user session
+✅ /home/runner/work/backup-library-app/backup-library-app/test/auth_and_rbac_test.dart: Authentication & Security (RBAC & Multi-Tenant) Multi-tenant isolation namespaces collection paths under tenant ID
+✅ /home/runner/work/backup-library-app/backup-library-app/test/dark_mode_and_theme_test.dart: ThemeService Tests Default ThemeMode is Light and themeModeName is Light
+✅ /home/runner/work/backup-library-app/backup-library-app/test/dark_mode_and_theme_test.dart: ThemeService Tests setThemeMode updates themeMode and notifies listeners
+✅ /home/runner/work/backup-library-app/backup-library-app/test/dark_mode_and_theme_test.dart: AppTheme Specifications lightTheme has correct brightness and Material 3 flags
+✅ /home/runner/work/backup-library-app/backup-library-app/test/dark_mode_and_theme_test.dart: AppTheme Specifications darkTheme has correct brightness and Slate dark tokens
+✅ /home/runner/work/backup-library-app/backup-library-app/test/backup_restore_test.dart: Database Full Backup and Disaster Recovery Tests exportFullBackupJson generates valid JSON schema with all entities
+✅ /home/runner/work/backup-library-app/backup-library-app/test/backup_restore_test.dart: Database Full Backup and Disaster Recovery Tests restoreFromBackupJson rehydrates complete state safely
+✅ /home/runner/work/backup-library-app/backup-library-app/test/backup_restore_test.dart: Database Full Backup and Disaster Recovery Tests restoreFromBackupJson handles invalid input gracefully
+✅ /home/runner/work/backup-library-app/backup-library-app/test/dark_mode_and_theme_test.dart: Dynamic AppColors Adaptive Helpers AppColors returns light tokens in light mode
+✅ /home/runner/work/backup-library-app/backup-library-app/test/dark_mode_and_theme_test.dart: Dynamic AppColors Adaptive Helpers AppColors returns dark tokens in dark mode
+✅ /home/runner/work/backup-library-app/backup-library-app/test/dark_mode_and_theme_test.dart: Dynamic AppColors Adaptive Helpers ThemeService.isDarkMode resolves correctly across modes
+✅ /home/runner/work/backup-library-app/backup-library-app/test/app_screens_compilation_test.dart: All core application screens and services compile cleanly
+✅ /home/runner/work/backup-library-app/backup-library-app/test/seat_and_student_test.dart: Seat Allocation and Student Management Tests Phone normalization handles various Indian format inputs
+✅ /home/runner/work/backup-library-app/backup-library-app/test/seat_and_student_test.dart: Seat Allocation and Student Management Tests Duplicate phone detection across active students
+✅ /home/runner/work/backup-library-app/backup-library-app/test/seat_and_student_test.dart: Seat Allocation and Student Management Tests Seat collision check and student association
+✅ /home/runner/work/backup-library-app/backup-library-app/test/seat_and_student_test.dart: Seat Allocation and Student Management Tests Shift conflict rules detect overlapping vs non-overlapping shifts
+✅ /home/runner/work/backup-library-app/backup-library-app/test/seat_and_student_test.dart: Seat Allocation and Student Management Tests Shift-wise seat allocation allows different students in different shifts on same seat
+✅ /home/runner/work/backup-library-app/backup-library-app/test/seat_and_student_test.dart: Seat Allocation and Student Management Tests Multi-month advance registration calculates duration, total fee and validUntil
+✅ /home/runner/work/backup-library-app/backup-library-app/test/seat_and_student_test.dart: Seat Allocation and Student Management Tests Payment status determination for Full Paid, Partial Paid, and Unpaid
+✅ /home/runner/work/backup-library-app/backup-library-app/test/seat_and_student_test.dart: Seat Allocation and Student Management Tests Vacating a student frees seat ONLY for that shift, preserving other shift occupant
+✅ /home/runner/work/backup-library-app/backup-library-app/test/seat_and_student_test.dart: Seat Allocation and Student Management Tests Marking dues and fee payment reconciliation
+✅ /home/runner/work/backup-library-app/backup-library-app/test/multi_branch_and_staff_test.dart: Multi-Branch & Staff Role Boundaries Tests Adding and switching active library branch updates profile
+✅ /home/runner/work/backup-library-app/backup-library-app/test/multi_branch_and_staff_test.dart: Multi-Branch & Staff Role Boundaries Tests Staff member management: Add, toggle active, and remove
+✅ /home/runner/work/backup-library-app/backup-library-app/test/financial_ledger_test.dart: Financial Ledger & Payment Reconciliation Tests Student fee collection decreases dues and records payment transaction
+✅ /home/runner/work/backup-library-app/backup-library-app/test/financial_ledger_test.dart: Financial Ledger & Payment Reconciliation Tests Adding and deleting expense item
+✅ /home/runner/work/backup-library-app/backup-library-app/test/financial_ledger_test.dart: Financial Ledger & Payment Reconciliation Tests Payment transaction query by student ID and phone
+
+🎉 37 tests passed.
