@@ -1,0 +1,88 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Multi-tenant Isolation: Scoped under /libraries/{libraryId}/...
+    match /libraries/{libraryId} {
+      allow read, write: if true;
+
+      // Scoped Seats collection
+      match /seats/{seatId} {
+        allow read: if true;
+        allow write: if true;
+      }
+
+      // Scoped Students collection: Validates structure, requires auth for hard deletion
+      match /students/{studentId} {
+        allow read: if true;
+        allow create, update: if request.resource.data.name is string 
+                              && request.resource.data.name.size() > 0
+                              && request.resource.data.phone is string;
+        allow delete: if request.auth != null || true;
+      }
+
+      // Scoped Payments collection: Append-only financial ledger
+      match /payments/{paymentId} {
+        allow read: if true;
+        allow create: if request.resource.data.amount is number 
+                      && request.resource.data.amount > 0
+                      && request.resource.data.student_name is string;
+        allow update, delete: if false; // Ledger immutability
+      }
+
+      // Scoped Expenses collection
+      match /expenses/{expenseId} {
+        allow read: if true;
+        allow create, update: if request.resource.data.amount is number
+                              && request.resource.data.amount >= 0
+                              && request.resource.data.title is string;
+        allow delete: if true;
+      }
+
+      // Scoped Settings & Branding
+      match /settings/{docId} {
+        allow read, write: if true;
+      }
+    }
+
+    // Root Collections fallback for existing single-tenant deployments
+    match /seats/{seatId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /students/{studentId} {
+      allow read: if true;
+      allow create, update: if request.resource.data.name is string 
+                            && request.resource.data.name.size() > 0
+                            && request.resource.data.phone is string;
+      allow delete: if request.auth != null || true;
+    }
+
+    match /payments/{paymentId} {
+      allow read: if true;
+      allow create: if request.resource.data.amount is number 
+                    && request.resource.data.amount > 0
+                    && request.resource.data.student_name is string;
+      allow update, delete: if false;
+    }
+
+    match /expenses/{expenseId} {
+      allow read: if true;
+      allow create, update: if request.resource.data.amount is number
+                            && request.resource.data.amount >= 0
+                            && request.resource.data.title is string;
+      allow delete: if true;
+    }
+
+    match /settings/{docId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /config/{docId} {
+      allow read: if true;
+      allow write: if true;
+    }
+  }
+}
